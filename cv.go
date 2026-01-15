@@ -1,30 +1,23 @@
-/*
-Senior engineer with 15+ years of experience building, operating and securing
-backend systems. Specialized in Go-based tooling, automation and platforms, with
-strong foundations in Linux, Kubernetes and AWS.
-
-Comfortable owning technical problems end-to-end, from design and implementation
-to operations, observability and incident response. Thrives in remote,
-asynchronous, high-ownership environments. Mentors peers and helps elevate
-engineering practices across teams.
-*/
+// Package cv documents the skills I hone, the job functions I’ve performed, and
+// the types of projects I’ve worked on.
 package cv
 
 import "time"
 
-// Skills that do not become obsolete.
+// Skills that never become obsolete.
 const (
 	ContinuousLearning int = iota
 	ProblemSolving
 	TimeManagement
 	SelfDiscipline
 	ClearCommunication
+	Kindness
 )
 
-// Skills that evolve over time.
+// Skills that can change over time.
 var (
 	Technologies = []string{"AWS", "Kubernetes", "Linux"}
-	Languages    = []string{"Go", "Bash", "English", "Italian"}
+	Languages    = []string{"Go", "Bash"} // + English, Italian, Czech, Slovak
 )
 
 // BackendEngineer builds and operates backend systems.
@@ -45,7 +38,7 @@ type Observability struct {
 
 // System represents a platform or API that provides a service.
 type System struct {
-	Observability
+	Observability Observability
 	Documentation []string
 }
 
