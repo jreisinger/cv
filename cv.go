@@ -6,12 +6,13 @@ import "time"
 
 // Skills that never become obsolete.
 const (
-	ContinuousLearning int = iota
-	ProblemSolving
-	TimeManagement
-	SelfDiscipline
+	ContinuousLearning = iota
 	ClearCommunication
+	ProblemSolving
+	SelfDiscipline
+	Simplicity
 	Kindness
+	Humility
 )
 
 // Skills that can change over time.
@@ -46,16 +47,13 @@ type System struct {
 func Build(requirements, languages, technologies []string) *System { return &System{} }
 
 // Operate runs and maintains the system.
-func (s *System) Operate(obs Observability) error { return nil }
+func (s *System) Operate() error { return nil }
 
 // Tool is a CLI utility that automates a task.
-type Tool string
+type Tool struct{}
 
 // Write creates a tool using the given programming language.
-func Write(language string) *Tool {
-	t := Tool("name")
-	return &t
-}
+func Write(language string) *Tool { return &Tool{} }
 
 // Support helps users by communicating in a natural language.
 func (t *Tool) Support(language string) error { return nil }
