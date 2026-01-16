@@ -1,5 +1,5 @@
-// Package cv documents the skills I hone, the job functions I’ve performed, and
-// the types of projects I’ve worked on.
+// Package cv documents the constant and variable skills I hone, the job
+// functions I’ve performed, and the types of projects I’ve worked on.
 package cv
 
 import "time"
